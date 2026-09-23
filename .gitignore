@@ -35,3 +35,4 @@ logs/
 
 # 日志与缓存
 .cache/
+private/
