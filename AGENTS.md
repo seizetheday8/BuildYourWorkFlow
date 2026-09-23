@@ -78,18 +78,20 @@ uv run ruff check src/
 
 # 类型检查
 uv run mypy src/
-通过标准：
+```
 
-所有测试绿
+**通过标准**：
+- 所有测试绿
+- `ruff` 无 error（warning 可接受）
+- `mypy` 无 error
 
-ruff 无 error（warning 可接受）
+---
 
-mypy 无 error
+## 7. 任务交接格式
 
-7. 任务交接格式
 DS 给本地端派任务时，指令必须包含以下字段：
 
-text
+```text
 【任务】
 - 目标：<一句话>
 - 负责端：CC / CX
@@ -98,19 +100,21 @@ text
 - 验收条件：<可验证的标准>
 - 禁止事项：<明确排除>
 - 汇报格式：<要贴什么>
+```
+
 本地端收到指令后：
+- 若字段缺失，**先汇报缺失**，不自行补充
+- 若发现"基准 commit"与当前 HEAD 不一致，**停止并汇报**
+- 完成后按"汇报格式"回报，不添油加醋
 
-若字段缺失，先汇报缺失，不自行补充
+---
 
-若发现"基准 commit"与当前 HEAD 不一致，停止并汇报
+## 8. 重要文档
 
-完成后按"汇报格式"回报，不添油加醋
+- [docs/00-overview.md](docs/00-overview.md) — 方案总览
+- [docs/04-collaboration.md](docs/04-collaboration.md) — 完整协作规则
+- [roadmap.md](roadmap.md) — 里程碑
 
-8. 重要文档
-docs/00-overview.md — 方案总览
+---
 
-docs/04-collaboration.md — 完整协作规则
-
-roadmap.md — 里程碑
-
-最后更新：Phase 0 规划阶段 · v0.1
+*最后更新：Phase 0 规划阶段 · v0.2*
