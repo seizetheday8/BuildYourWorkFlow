@@ -1,6 +1,6 @@
 """Token log schema definitions."""
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any, Literal
 
 from pydantic import BaseModel, Field
@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 class TokenLog(BaseModel):
     """A single LLM call log entry."""
 
-    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))
     session_id: str
     task_id: str
     agent_name: str
