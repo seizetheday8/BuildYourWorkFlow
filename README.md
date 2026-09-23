@@ -38,7 +38,7 @@
 
 ## 状态
 
-🚧 Phase 0 进行中（单 Agent + 上下文管理 MVP）
+✅ Phase 0 已完成（单 Agent + 上下文管理 + Token 观测链路）
 
 ## License
 
