@@ -10,14 +10,16 @@ Precision is deferred to Phase 1.
 """
 
 from dataclasses import dataclass, field
-from typing import Literal, TypedDict
+from typing import Any, Literal, TypedDict
 
 
-class Message(TypedDict):
+class Message(TypedDict, total=False):
     """A chat message in OpenAI-compatible format."""
 
     role: str
     content: str
+    tool_calls: list[dict[str, Any]]
+    tool_call_id: str
 
 
 Role = Literal["system", "user", "assistant", "tool"]
@@ -31,7 +33,7 @@ def _estimate_tokens(text: str) -> int:
 
 
 def _message_tokens(msg: Message) -> int:
-    return _estimate_tokens(msg["content"])
+    return _estimate_tokens(msg.get("content") or "")
 
 
 @dataclass
@@ -82,6 +84,14 @@ class ContextManager:
         if role not in ("system", "user", "assistant", "tool"):
             raise ValueError(f"invalid role: {role}")
         self._history.append(Message(role=role, content=content))
+
+    def add_message(self, msg: Message) -> None:
+        """Add a raw message without role validation.
+
+        Used by AgentLoop to append assistant messages with tool_calls
+        and tool result messages with tool_call_id.
+        """
+        self._history.append(msg)
 
     # ---- decay ----
 
