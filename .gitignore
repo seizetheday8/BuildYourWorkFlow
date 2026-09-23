@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Go
+*.exe
+*.test
+*.out
+vendor/
+go.work
+go.work.sum
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# 环境变量与密钥
+.env
+.env.local
+*.key
+secrets/
+
+# 本地数据
+data/
+logs/
+*.db
+*.sqlite
+
+# 日志与缓存
+.cache/
