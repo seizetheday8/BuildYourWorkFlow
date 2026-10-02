@@ -7,7 +7,8 @@
 
 | ID | 类型 | 模型 | 成本 | 状态 |
 |----|------|------|------|------|
-| [ds-web](ds-web.md) | 网页端 | DeepSeek | 低 | 活跃 |
+| [ds-web](ds-web.md) | 网页端 | DeepSeek | 免费 | 活跃 |
+| [gpt-web](gpt-web.md) | 网页端 | GPT-5.6 Sol | 订阅内 | 活跃 |
 
 ## 如何新增节点
 
