@@ -1,3 +1,5 @@
+> ⚠️ 本文档为历史归档。项目已重构为 Agent Harness 架构，最新的目录结构请参考 AGENTS.md 或 docs/07-refactor-plan.md。
+
 # 06 · Phase 0 总结
 
 > Phase 0 目标：跑通单 Agent + 上下文管理的 CLI 工具，采集基线 Token 数据。

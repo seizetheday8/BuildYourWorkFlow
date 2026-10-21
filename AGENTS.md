@@ -48,18 +48,22 @@
     ├── README.md              # 门面
     ├── roadmap.md             # 里程碑与时间线
     ├── docs/
-    │   ├── 00-overview.md     # 方案总览
-    │   ├── 01-architecture.md # 架构详解（待建）
-    │   ├── 02-token-strategy.md # Token 优化策略（待建）
-    │   ├── 03-evaluation.md   # 评测方案（待建）
-    │   └── 04-collaboration.md # 完整协作规则
-    └── src/                   # 代码（Phase 0 时建）
+    │   ├── 00-overview.md
+    │   ├── 04-collaboration.md
+    │   ├── 07-refactor-plan.md # 新架构蓝图
+    │   └── decisions/
+    ├── legacy/                # 历史封存文档
+    └── src/
+        └── code_harness/
+            ├── gateway/       # LLM 成本治理与路由网关 (待开发)
+            ├── supervisor/    # 自主编排器 (待开发)
+            └── (telemetry/llm/context/tools/agent/cli)
 
 ---
 
 ## 5. 当前状态
 
-- **Phase**：Phase 0 规划阶段
+- **Phase**：Phase 2 准备阶段（重构蓝图已定，待 Go 语言学习完毕后启动编码）
 - **最新 commit**：见 `git log --oneline -1`
 - **下一步**：见 [roadmap.md](roadmap.md)
 
