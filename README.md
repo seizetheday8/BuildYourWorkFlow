@@ -1,6 +1,6 @@
 # Code Harness
 
-> 一个面向研发场景的个人 AI 工作流系统。通过 Supervisor-Worker 多 Agent 协作、上下文分层、语义缓存与 Agent 间通信压缩，在真实编码任务中量化降低 Token 消耗与端到端延迟。
+> 一个面向多 Agent 协作的 Agent Harness 与 LLM 成本治理基础设施。通过 Supervisor 自主编排、MCP 协议标准调用、以及网关层 Token 计量与成本路由，实现真实场景下的 Token 节省与自动化降级。
 
 ## 为什么做这个
 
