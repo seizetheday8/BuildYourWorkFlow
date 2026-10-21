@@ -69,25 +69,18 @@
 
 ---
 
-## 6. 标准验证命令
+# 标准验证命令
 
-> Phase 0 代码开始前为占位。代码落地后立即生效。
+> Windows 环境下的本地 .venv 执行路径。
 
-```bash
-# 测试
-uv run pytest -v
-
-# Lint
-uv run ruff check src/
-
-# 类型检查
-uv run mypy src/
-```
+.venv/Scripts/python.exe -m pytest -v
+.venv/Scripts/python.exe -m ruff check src/
+.venv/Scripts/python.exe -m mypy src/
 
 **通过标准**：
 - 所有测试绿
-- `ruff` 无 error（warning 可接受）
-- `mypy` 无 error
+- ruff 无 error（warning 可接受）
+- mypy 无 error
 
 ---
 
